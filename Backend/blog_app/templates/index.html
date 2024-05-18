@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI blog generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <style>
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        .load {
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border: solid 10px #8822aa;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name: rotate;
+            -webkit-animation-duration: 1.0s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+
+            transition: all 0.5s ease-in;
+            animation-name: rotate;
+            animation-duration: 1.0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            /* Hide content while loading */
+            body.loading {
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="flex flex-col min-h-scrren bg-gray-200 font-sans antialised">
+    <nav class="bg-blue-900 p-4 text-white flex justify-between">
+        <div class="text-white text-3xl font-bold">
+            <h1>AI blog generator</h1>
+        </div>
+        <div><a href="#" class="hover:underline">Logout</a></div>
+    </nav>
+    <br>
+
+    <!-- Main -->
+    <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+        <div
+            class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-2xl transition-transform transform hover:scale-110 flex flex-col">
+            <!--Introduction-->
+            <div class="text-center">
+                <h2 class="text-2xl font-semibold text-blue-900 mb-4 hover:underline">Welcome to the AI blog generator
+                </h2>
+                <p class="text-lg text-gray-900">Generate high quality blog articles from Youtube videos using
+                    artificial
+                    intelligence.
+                    Simply enter the youtube link below and let AI create the content for you :) </p>
+            </div>
+
+            <div class="mt-10">
+                <h2 class="text-xl mb-4 font-semibold text-blue-900 hover:underline">Enter Youtube Video Link</h2>
+                <div class="flex space-x-4 hover:scale-110">
+                    <input id="youtubeLink" type="url" placeholder="Waiting for Youtube Link..."
+                        class="flex-grow p-2 border border-blue-900 rounded-l hover:border-blue-900 flex flex-col">
+                    <button
+                        class="bg-blue-500 w-auto rounded-br-lg rounded-tr-lg font-semibold px-4 py-2 text-white custom-rounded hover:bg-blue-900 transition-colors duration-300">Generate</button>
+                    <!--text-sm p-2 w-auto bg-blue-600 rounded-tr rounded-br text-white -->
+
+
+                </div>
+            </div>
+            <!--section for loading screen-->
+            <div style="display: none;" id="loading-circle" class="load"></div>
+
+            <!--Generated Blog display section-->
+            <section class="mt-10 flex-grow">
+                <h2 class="font-sans text-xl font-semibold text-blue-900 hover:underline mb-4">
+                    Generated Blog Article
+                </h2>
+
+                <div id="blogContent" class=" mt-4 text-lg text-gray-800 space-y-4 ">Blog Content</div>
+            </section>
+        </div>
+    </div>
+    <footer class="text-sm text-blue-900 p-4 text-center mt-10">
+        <div class="text-blue-500">
+            <h2>&copy; Powered by <a target="_blank" href="https://www.linkedin.com/in/chitikenamouli/"
+                    class="font-semibold hover:text-blue-900  hover:underline">Mouli
+                    Narayana Chitikena</a></h2>
+        </div>
+    </footer>
+
+</body>
+
+</html>

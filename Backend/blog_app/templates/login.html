@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="text-lg bg-gray-200 font-sans antialised">
+    <!--Navbar-->
+    <nav class="bg-blue-900 p-4 flex justify-between" >
+        <div class="text-white font-bold text-3xl " >AI blog generator</div>
+        <div class="text-white ">
+            <a href="#" class="hover:underline hover:font-semibold">Login</a>
+            <a>|</a>
+            <a href="#" class="hover:underline hover:font-semibold">Signup</a>
+        </div>
+    </nav>
+    <!-- <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div class="text-3xl font-bold">
+            <h1>AI blog generator</h1>
+        </nav> -->
+    <div class="flex items-center justify-center h-screen ">
+        <div class="bg-white p-8 shadow-md rounded-lg max-w-md w-full transition duration-300 ease-in-out transform hover:scale-110">
+            <!--Login form-->
+            <form class="space-y-6">
+                <h2 class="text-3xl font-bold text-blue-900">Login</h2>
+                <div>
+                    <label for="username" class="text-lg font-medium block  mb-3">Username</label>
+                    <input id="username" type="text" placeholder="Enter your username..." class="w-full p-2 border rounded-xl border-blue-300 hover:border-blue-900">
+                </div>
+                
+                <div>
+                    <label for="password" class="text-lg font-medium block mb-3">Password</label>
+                    <input id="password" type="password" placeholder="Enter your password..." class="w-full p-2 border rounded-xl border-blue-300 hover:border-blue-900">
+
+                </div>
+                <button type="submit" class="w-full bg-blue-500 p-2  border rounded-3xl text-white hover:bg-blue-900">Login</button>
+
+            </form>
+
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>
